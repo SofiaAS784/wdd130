@@ -1,5 +1,6 @@
 :root {
     --primary-color: rgba(127, 255, 212, 0.701);
+    --header-color: rgb(76, 232, 183);
     --title-color: navy;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
@@ -22,6 +23,18 @@ header, main, footer {
     margin: 0 auto;
 }
 
+header {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    background-color: var(--header-color);
+}
+
+header img {
+    width: 200px;
+    align-items: center;
+}
+
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--title-color);
@@ -32,9 +45,25 @@ nav, p, section, article {
     padding: 8px;
 }
 
-.socialmedia a {
-    text-decoration: none;
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: end;
 }
+
+.menu a {
+    display: block;
+    background-color: var(--primary-color);
+    margin-top: 45px;
+    border: 2px solid black;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: var(--font-color);
+    text-wrap: nowrap;
+    font-size: 14px;
+    box-shadow: 0 0 10px gray;
+}
+
 
 .hero {
     position: relative;
@@ -72,6 +101,80 @@ article {
     margin: 10px;
 }
 
+h2 {
+    text-align: center;
+}
+
+section {
+    display: block;
+    background-color: aquamarine;
+}
+
+.history {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.history h2 {
+    grid-area: 1/2/2/3;
+    margin-right: 15px;
+}
+
+.history img {
+    width: 200px;
+    margin-top: 35px;
+    grid-area: 1/2/2/3;
+}
+
+.history p {
+    display: block;
+    width: 250px;
+}
+
+.second {
+    grid-area: 1/3/2/4;
+}
+
+.adventure {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.adventure h2 {
+    position: absolute;
+    top: 10px;
+    left: 285px;
+}
+
+.adventure img {
+    width: 150px;
+    height: auto;
+}
+
 footer {
+    position: relative;
     border-top: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    background-color: var(--header-color);
+}
+
+footer p {
+    position: absolute;
+    left: 230px;
+    top: 10px;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: end;
+    margin: 0.5rem 10px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    padding: 0.2rem;
 }
