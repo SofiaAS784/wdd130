@@ -65,9 +65,10 @@ select {
 }
 
 input[type="checkbox"] {
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
     vertical-align: bottom;
+    margin: 0.2rem;
 }
 
 button {
@@ -98,7 +99,7 @@ footer {
 }
 .column1 {
     grid-template-columns: 3fr 1fr;
-    margin: 0.2rem;
+    margin: 0.1rem;
 }
 
 .column2 {
